@@ -1,0 +1,128 @@
+.rec_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 15px;
+    grid-template-rows: 450px;
+}
+
+.recomandare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: 
+    linear-gradient(to bottom, var(--orange) 30%, var(--orange) 30%, white 30%, white 70%, transparent 70%, transparent 100%);
+
+    background-size: 50% 100%; 
+    background-position: top;
+
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 270px;
+}
+
+.recomandare img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.user_nume {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.user_loc {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+.user_descriere {
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-wrapper{
+    width: 300px;
+}
+
+.card{
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  }
+
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    height: 225px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--orange);
+    border-radius: 10px 10px 0 10px;
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--orange);
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+  }
+  .card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 0px;
+  }
+
+  .locatie{
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+    height: 100px;
+  }

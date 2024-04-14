@@ -1,0 +1,105 @@
+UNI/TE
+ =
+
+
+ 
+- students must have 
+
+    <-- Detalii Personale -->
+    - name
+    - family name
+    - birthday
+    - location(near you)
+    - telefon
+    - email
+
+    <-- Despre tine --> 
+    - passions/skills/interests
+    - achivements 
+    - prior/current  experiences 
+
+    <-- Educatie -->
+    - liceu
+    - facultate    
+
+    
+    /*
+    <-- ce vrei sa inveti -->
+    - aici poate sa fie intrebari, gen ce: vrei sa inveti? skill-uri pe care vrei s ale dobandesti
+    - aici iti zice Antonio ce are nevoie pentru AI
+    si ti-a zis?
+    */
+
+
+    - tech stack //no
+    - ranking(this is for sex "how good is Raul in bed, response: very good") //no
+    - wants to learn //no
+    - achivements 
+    - feedback, rating //no
+    - about me //no
+    
+    
+
+
+    
+
+Application:
+
+- a platform that eliminates the 
+- connecting students around the globe
+- forum for questions N
+- forum for hanging out N
+- anouncements Y 
+- post Y
+- event N
+- study groups N
+
+Beneficii:
+    
+                Organizare
+    Consolidam platformele
+
+
+    Unificarea Platformelor: O Singură Aplicație Web
+    Centralizarea resurselor
+    Extindere Resurse Student
+    Acces Global Educațional
+    Suport Învățare Personalizat
+    Integrare Academică Prietenoasă
+    Monitorizare Academică Eficientă
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//inscrie facultate form 
+
+--Detalii facultate
+nume, judet, oras,
+
+--specializari
+nume specializare
+
+--resure (eterenuri fotbal, etc)
+nume resursa, pret resursa
+
+
+
+
+TESTIMONIALE
+    -Forumul Uni/Te este o resursă neprețuită pentru mine. Aici pot pune întrebări, împărtăși experiențe și învăța din perspectivele altor studenți din întreaga lume.
+    -In Uni/Te, am găsit exact ceea ce căutam. Este rapid, ușor de utilizat și esențial pentru viața mea academică
+    -Este o experiență care mi-a îmbogățit enorm percepția asupra educației.
+    -Uni/Te a transformat complet modul în care interacționez cu studenți din întreaga tara
+    -Am fost mereu în căutarea unei platforme care să faciliteze schimbul de informații și actualizări importante între colegi.

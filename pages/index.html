@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/assets/css/main.css'>
+    <link rel='stylesheet' href='/assets/css/index.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>UniTe</title>
+</head>
+
+<body>
+
+
+    <div class="menu">
+        <div class="logo">
+            <img src='/assets/images/logo.svg'/>
+            <div class="app_name">
+                <span style="color: var(--orange);">Uni</span><span style="color: var(--green)">TE</span>
+            </div>
+        </div>
+        <div class="links">
+            <a href="/">
+                <img src='/assets/images/home (1).png'>
+                Acasa
+            </a>
+            <a href="/">
+                <img src='/assets/images/about-us.png'>
+                Despre noi
+            </a>
+            <a href="/">
+                <img src='/assets/images/contact-us.png'>
+                Contacteaza-ne
+            </a>
+            <a href="/faculty" class="special">
+                <img src='/assets/images/university (1).png'>
+                Inscrie facultatea
+            </a>
+
+            {{#login}}
+                <a href="/dashboard" class="special">
+                    <img src='/assets/images/user.png'>
+                    Contul meu
+                </a>
+            {{/login}}
+
+            {{^login}}
+            <a href="/login" class="special">
+                <img src='/assets/images/user.png'>
+                Autentificare
+            </a>
+            {{/login}}
+  
+        </div>
+        <div class="login"></div>
+    </div>
+
+    <section class="hero">
+        <div class="text">
+            <h1>Conectează-te. Învață. Crestem Împreună</h1>
+            <p>Aici puteți să vă împărtășiți cunoștințele, să vă ajutați reciproc și să puneți întrebări. Este un spațiu virtual unde comunitatea de studenți se adună pentru a învăța împreună, a dezvolta abilități și a construi legături!</p>
+            <button class="btn primary maxW" style="font-weight: bold;" onclick="register()"> <img src = '/assets/images/join (1).png'/> Inscrie-te</button>
+        </div>
+        <img src='/assets/images/21267951_12595_UGVvcGxlIHJlYWRpbmcgYm9va3M-removebg-preview.png'/>
+    </section>
+
+    
+
+    <section class="textbox">
+        <div class="content">
+            <div class="left">
+                <img src="/assets/images/file.png" alt="Blueprint">
+            </div>
+            <div class="right">
+                <p class="small-text">De ce noi?</p>
+                <h2>Conectam studenti de pretutindeni</h2>
+                <p>Uni/Te este o platformă creată pentru a conecta studenții din întreaga lume, promovând colaborarea și schimbul de cunoștințe. Accentuează dezvoltarea personală și îmbunătățirea învățării prin diverse caracteristici:</p>
+                <ul>
+                    <li>Eliminarea barierei geografice pentru conexiunea studenților din diferite părți ale lumii.</li>
+                    <li>Forum pentru întrebări și răspunsuri pentru a promova schimbul de cunoștințe.</li>
+                    <li>Anunțuri pentru postarea de informații și actualizări importante.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="card_section">
+
+        <div class="card_tray">
+           <div class="cards">
+
+            <div class="card">
+                <img src = '/assets/images/games-and-esports.png' style="width: 400px;"/>
+                <h2>Resurse– Facultate</h2>
+                <p>Pagina noastră permite facultăților să încarce și să administreze materiale educaționale pentru diverse materii, organizate pe categorii. Accesul la resurse este rapid și simplu, indiferent de facultate sau an de studiu. Acest instrument centralizat îmbunătățește experiența academică prin oferirea unei navigări eficiente și organizate.</p>
+            </div>
+
+            <div class="card">
+                <img src = '/assets/images/files-search.png' style="height: 300px;"/>
+                <h2>Resurse - Studenti</h2>
+                <p>Pagina noastră permite studenților să încarce și să partajeze resurse educaționale, precum notițe și poze, pentru cursurile lor. Este o platformă interactivă și colaborativă unde studenții pot contribui și pot accesa conținutul altor colegi, sprijinind astfel învățarea și dezvoltarea academică în comunitatea studențească.</p>
+            </div>
+
+            <div class="card">
+                <img src = '/assets/images/library-forum.png'/>
+                <h2>Forum Studenti </h2>
+                <p>Descoperă un forum interactiv unde studenții pot interacționa și împărtăși cunoștințe într-un mediu prietenos. Postările sunt categorizate pe skill-uri, ușurând conectarea cu persoanele cu expertiză în domeniul tău.</p>
+            </div>
+
+            <div class="card">
+                <img src = '/assets/images/newsletter.png'/>
+                <h2>Anunturi - Facultate </h2>
+                <p>
+                    Platforma noastră aduce la îndemână anunțuri de la facultăți, furnizând studenților acces rapid la informații despre evenimente academice, programe de voluntariat, stagii și alte oportunități extracurriculare esențiale pentru parcursul lor universitar.</p>
+            </div>
+
+            
+
+           </div>
+        </div>
+
+        <img id="next_slide" src="/assets/images/next.png" style="width: 32px; height: 32px; margin-right: 10px"/>
+
+    </section>
+
+    <div class="transition_one">
+
+    </div>
+    <section class="benefits">
+
+        <img src = '/assets/images/treasure-chest (1).png' style="width: 400px;margin-top: -120px"/>
+
+        <div class="benefit hidden one">
+            <img src="/assets/images/money.png"/>
+            <h3>Reducem costul</h3>
+        </div>
+
+        <div class="benefit hidden two">
+            <img src="/assets/images/server.png"/>
+            <h3>Centralizarea<br> resurselor</h3>
+        </div>
+
+        <div class="benefit hidden three">
+            <img src="/assets/images/hand-shake-gesture.png"/>
+            <h3>Acces<br> global</h3>
+        </div>
+
+        <div class="benefit hidden four">
+            <img src="/assets/images/education (1).png"/>
+            <h3>Suport<br> Învățare</h3>
+        </div>
+
+        <div class="benefit hidden five">
+            <img src="/assets/images/education-degree.png"/>
+            <h3>Monitorizare<br> Academică</h3>
+        </div>
+
+        <div class="benefit hidden six">
+            <img src="/assets/images/communication.png"/>
+            <h3>Optimizarea<br> Comunicării</h3>
+        </div>
+
+    </section>
+
+    <section class="testimonials">
+
+        <h1>Ce spun studentii despre aceasta aplicatie?</h1>
+        <p>Experiențele utilizatorilor </p>
+
+        <div class="image_holder inactive one" data-id="0">
+            <img src = '/assets/images/user (1).png' />
+        </div>
+
+        <div class="image_holder inactive two" data-id="1">
+            <img src = '/assets/images/user (1).png' />
+        </div>
+
+        
+        <div class="image_holder inactive three" data-id="2">
+            <img src = '/assets/images/user (1).png' />
+        </div>
+
+        <div class="image_holder inactive four" data-id="3">
+            <img src = '/assets/images/user (4).png'/>
+        </div>
+
+        <div class="image_holder active" data-id="4">
+            <img src = '/assets/images/user (3).png' style="width: 128px; height: 128px;" />
+        </div>
+        
+        <div class="user_testimonial">
+
+            <p class="hidden">
+                Sunt atât de încântat că am descoperit Uni/Te! Pentru prima dată într-o lungă perioadă, nu mai trebuie să navighez pe mai multe site-uri în căutarea resurselor academice de care am nevoie. Uni/Te este un hub centralizat unde găsesc totul, de la materialele cursurilor până la discuții inspiraționale și sfaturi practice. Este o ușurare incredibilă să știu că pot găsi tot ce-mi trebuie într-un singur loc, economisind timp prețios și eliminând stresul căutării pe internet. Mulțumesc, Uni/Te, pentru că mi-ai făcut viața academică mult mai simplă și mai plăcută!            </p>
+            <p class="hidden">
+                Uni/Te este o resursă neprețuită pentru mine. Aici pot pune întrebări, împărtăși experiențe și învăța din perspectivele altor studenți din întreaga tara. Atmosfera prietenoasă și sprijinul din partea comunității mă motivează să explorez noi idei și să abordez provocările academice cu încredere. În plus, posibilitatea de a conecta cu colegi de la alte universități și de a învăța din experiențele lor îmi oferă o perspectivă mai largă și îmbogățește cunoștințele mele. Sunt recunoscător pentru această platformă care creează un mediu propice pentru învățare și dezvoltare personală.            </p class="hidden">
+            <p class="hidden">
+                Este o experiență care mi-a îmbogățit enorm percepția asupra educației. Interacțiunea constantă cu colegi din diverse medii și culturi mi-a deschis orizonturile și m-a inspirat să explorez noi modalități de învățare și colaborare. Prin participarea activă la discuții și schimbul de idei, am realizat că educația este mult mai mult decât doar acumularea de cunoștințe.</p>
+            <p class="hidden">
+                În Uni/Te, am găsit exact ceea ce căutam. Este rapid, ușor de utilizat și esențial pentru viața mea academică. Prin intermediul acestei platforme, am reușit să accesez rapid informațiile de care aveam nevoie, să răspund la întrebări și să împărtășesc experiențele mele într-un mod eficient și interactiv. Este o resursă valoroasă care mă ajută să gestionez mai bine sarcinile academice și să mă conectez cu colegii și profesorii într-un mod convenabil și productiv.            </p>
+            <p>
+                Uni/Te este o sursă de inspirație pentru mine în lumea academică online! Aici am descoperit threaduri care abordează probleme și întrebări ridcate de studenți mai experimentați. Aceste discuții relevante și variate m-au surprins mereu cu diversitatea și profunzimea subiectelor abordate. De la întrebări practice legate de materii specifice până la discuții filozofice despre viitorul educației, Uni/Te m-a provocat să explorez și să învăț dintr-o gamă largă de perspective. Este impresionant să vezi cum comunitatea aduce în prim-plan probleme și idei care altfel ar fi rămas neexploatate.</p>
+        </div>
+
+    </section>
+
+    <section class="pricing">
+        <div class="pricing_card">
+            <div class="pricing_header">
+                PRO <img src = '/assets/images/badge.png'/>
+            </div>
+
+            <div class="price">
+                $<span>500</span>
+            </div>
+            <div class="price_time">
+                PER YEAR
+            </div>
+            <div class="range_container">
+  
+                <div class="range-slider">
+                  <span id="rs-bullet" class="rs-label">1000</span>
+                  <input id="rs-range-line" class="rs-range" type="range" value="1000" min="1000" max="5000">
+                  
+                </div>
+                
+                <div class="box-minmax">
+                  <span>1000</span><span>5000</span>
+                </div>
+                
+              </div>
+
+              <div class="price_benefits">
+                <span>
+                    <img src = '/assets/images/star.png'/>
+                    Suport tehnic 24/7
+                </span>
+                <span>
+                    <img src = '/assets/images/star.png'/>
+                    Utilizatori nelimitati
+                </span>
+                <span>
+                    <img src = '/assets/images/star.png'/>
+                    Backup lunar
+                </span>
+              </div>
+              
+        </div>
+        <div class="versus">
+            <div class="versus_items">
+                <div class="item" data-value="0.75">
+                    <img src = '/assets/images/moodle.svg' style="width: 60px;"/>
+                    <b>Moodle</b>: <span>750</span>$
+                </div>
+                <div class="item" data-value="0.9">
+                    <img src = '/assets/images/teams.svg' style="width: 40px;"/>
+                    <b>Teams</b>: <span>900</span>$
+                </div>
+             
+
+                <div class="item" data-value="1.4">
+                    <img src = '/assets/images/canvas.webp' style="width: 80px;"/>
+                    <b>Canvas</b>: <span>1400</span>$
+                </div>
+
+                <div class="item" data-value="0.65">
+                    <img src = '/assets/images/blackboard-vector-logo.svg' style="width: 80px;"/>
+                    <b>Blackboard</b>: <span>650</span>$
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>
+        <a href="mailto:add_astra@yahoo.com">add_astra@yahoo.com</a></p>
+        <p>© 2024 UniTe. Made with <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red" class="ui-svg-inline"><path d="M20.8,5.7c-2.1-2.8-6-3.4-8.8-1.3C9.5,2.5,6,2.8,3.8,5c-2.4,2.4-2.5,6.4,0,8.9l6.2,6.2c0.5,0.5,1.2,0.8,1.9,0.8c0.7,0,1.4-0.3,1.9-0.8l6.2-6.2C22.4,11.6,22.6,8.2,20.8,5.7z"></path></svg> at polihack</p>
+    </div>
+
+    <script>
+        var testimonials = document.querySelectorAll(".testimonials .image_holder");
+        const nextBtn = document.querySelector('#next_slide');
+        let cards = document.querySelectorAll(".card");
+        let p_testimonials = document.querySelectorAll(".user_testimonial p");
+
+        var INDEX = 0, INDEX_TESTIMONIAL = 0;
+
+        nextBtn.addEventListener("click", ()=>{
+
+            //get the next 3rd card 
+            INDEX+=3;
+            if (INDEX > cards.length)
+            {
+                INDEX = 0;
+            }
+
+            let left = cards[INDEX].getBoundingClientRect().x;
+            
+            document.querySelector(".cards").style.transform = `translateX(-${INDEX == 0 ? 0 : left}px)`;
+        })
+
+        window.addEventListener("scroll", ()=>{
+            let pos = window.pageYOffset || document.documentElement.scrollTop;
+      
+
+            var boundingRect = document.querySelector(".benefits").getBoundingClientRect();
+
+        // Get the offset top position relative to the viewport
+        var offsetTop = boundingRect.top + window.pageYOffset - 120;
+
+            var maxScrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+    // Check if we can't scroll anymore
+            var isAtBottom = (pos + window.innerHeight >= maxScrollHeight);
+            console.log(isAtBottom);
+
+            if (pos >= offsetTop-100 || isAtBottom)
+            {
+                //clear 
+                try{
+                    Array.from(document.querySelectorAll(".benefit")).forEach((elem)=>{
+                        elem.classList.remove("hidden");
+                    })
+                }catch(e){
+
+                }
+            }
+        })
+
+        function getRelativeCoordinates(childElement) {
+            var parentElement = childElement.offsetParent;
+            var x = childElement.offsetLeft;
+            var y = childElement.offsetTop;
+        
+            while (childElement !== parentElement && parentElement != null) {
+                x -= parentElement.offsetLeft;
+                y -= parentElement.offsetTop;
+                childElement = parentElement;
+                parentElement = parentElement.offsetParent;
+            }
+        
+            return { x: x, y: y };
+        }
+
+        function get_number(elem){
+            for (const c of elem.classList){
+
+                if (c != "active" && c != "inactive" && c != "image_holder")
+                {
+                    return c;
+                }
+            }
+        }
+
+        setInterval(()=>{
+            
+            if (INDEX_TESTIMONIAL == testimonials.length){
+                INDEX_TESTIMONIAL = 0;
+            }
+            //move current index to image_holder.active
+            //get pos first of activ 
+            let active_elem = document.querySelector(".image_holder.active");
+
+            //switch now 
+            active_elem.style.top = `${testimonials[INDEX_TESTIMONIAL].offsetTop}px`;
+            active_elem.style.left = `${testimonials[INDEX_TESTIMONIAL].offsetLeft}px`;
+
+            testimonials[INDEX_TESTIMONIAL].style.left = `calc((100% - 128px) / 2)`;
+            testimonials[INDEX_TESTIMONIAL].style.top = `200px`;
+
+            active_elem.classList.remove("active");
+            active_elem.classList.add("inactive");
+            active_elem.classList.add(get_number(testimonials[INDEX_TESTIMONIAL]));
+
+            testimonials[INDEX_TESTIMONIAL].classList.remove("inactive");
+            testimonials[INDEX_TESTIMONIAL].classList.add("active");
+
+            document.querySelector(".user_testimonial p:not(.hidden)").classList.add("hidden")
+            p_testimonials[parseInt(testimonials[INDEX_TESTIMONIAL].dataset.id)].classList.remove("hidden");
+
+
+
+            INDEX_TESTIMONIAL++;
+        },3000)
+        
+        var rangeSlider = document.getElementById("rs-range-line");
+var rangeBullet = document.getElementById("rs-bullet");
+
+rangeSlider.addEventListener("input", showSliderValue, false);
+function mapRange(value, minInput, maxInput, minOutput, maxOutput) {
+    return ((value - minInput) / (maxInput - minInput)) * (maxOutput - minOutput) + minOutput;
+  }
+  
+function showSliderValue() {
+  rangeBullet.innerHTML = rangeSlider.value;
+  rangeBullet.style.left = mapRange(rangeSlider.value, 1000, 5000, 0, 300) + "px";
+
+  document.querySelector(".price span").textContent = parseInt(rangeSlider.value) * 0.5;
+
+  Array.from(document.querySelectorAll(".versus_items .item")).forEach((versus_item)=>{
+    console.log(versus_item);
+    console.log(parseFloat(versus_item.dataset.value));
+    console.log(parseInt(rangeSlider.value));
+    versus_item.querySelector("span").textContent = Math.floor(parseInt(rangeSlider.value) * parseFloat(versus_item.dataset.value));
+  })
+}
+
+    function register(){
+        window.location.href = "/register";
+    }
+    </script>
+</body>
+</html>

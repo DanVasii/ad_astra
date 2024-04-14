@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/dashboard_main.css">
+  <!-- <link rel="stylesheet" href="/assets/css/change_credentials.css"> If you have additional styles -->
+</head>
+<body>
+
+<div class="container">
+  <div class="menu">
+    <div class="user_section">
+      <div class="image_holder"></div>
+      <p>Vasii Dan Emanuel</p>
+    </div>
+    <div class="links">
+      <a href="/dashboard" class="accessed">
+        <img src="/assets/images/home (1).png">
+        <span>Acasa</span>
+      </a>
+      <a href="/postari" class="inactive">
+        <img src="/assets/images/post-view.png">
+        <span>Postari</span>
+      </a>
+    
+      <a href="/upload_res" class="inactive">
+        <img src="/assets/images/globe.png">
+        <span>Resurse</span>
+      </a>
+
+      <a href="/grupa_mea" class="inactive">
+        <img src="/assets/images/group.png">
+        <span>Grupa mea</span>
+      </a>
+
+      <a href="/recomandari" class="inactive">
+        <img src="/assets/images/information.png">
+        <span>Recomandari</span>
+      </a>
+
+      <a href="/log_out" class="accessed">
+        <img src="/assets/images/log-out.png">
+        <span>Log Out</span>
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="box">
+      <h2>Detalii personale</h2>
+      <div class="content_row split">
+        <input type="text" placeholder="Nume" required value="Vasii">
+        <input type="text" placeholder="Prenume" required value="Dan Emanuel">
+      </div>
+      <div class="content_row">
+        <input type="date" required value="2003-05-14">
+      </div>
+      <div class="content_row">
+        <input type="text" placeholder="Locație" value="Prahova, Ploiesti">
+      </div>
+      <div class="content_row split">
+        <input type="text" placeholder="Telefon" value="0727385665">
+        <input type="text" placeholder="Email" required value="vasiidanemanuel@yahoo.com">
+      </div>
+
+    </div>
+    <div class="box">
+      <h2>Despre tine</h2>
+      <div class="content_row">
+        <textarea rows="10" style="width: 100%;">Coordonator de contact cu alegătorii, angajându-se cu alegătorii și adresându-le preocupările în numele oficialilor aleși.</textarea>
+      </div>
+    </div>
+    <div class="box">
+      <h2>Educație</h2>
+      <div class="content_row split">
+        <input type="text" placeholder="Facultate" value="Universitatea Tehnica Cluj-Napoca - Facultatea de Automatica si Calculatoare">
+        <input type="text" placeholder="Liceu" value="Colegiul National Ion Luca Caragiale"/>
+      </div>
+    </div>
+    <div class="content_row">
+      <button class="btn primary maxW"><img src='/assets/images/save (1).png'/>Save</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+:root{
+    --white: #FFFFFF;
+    --gray: #E6E6E6;
+    --orange: #FDA312;
+    --blue: #0081AF;
+    --black: #000000;
+    --green: #2AB73C;
+    --red: #EF3E36;
+
+    --pale_black: #4D4D4D;
+    --pale_blue: #33559F;
+    --plae_orange: #FDBE59;
+    --pale_gray: #EDEDED;
+    --pale_green: #7AE188;
+    --pale_red: #F36F68;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: url('/assets/images/gradient.png');
+    background-size: cover;
+    > .logo
+    {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+
+        align-items: center;
+
+        > .app_name{
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        > img{
+            width: 60px;
+        }
+    }
+
+    > .links{
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+
+        > a{
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            align-items: center;
+            padding: 0px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 500;
+
+            transition: background-color .3s;
+             
+            &:hover{
+                background-color: var(--plae_orange);
+            }
+        }
+
+        > a.special{
+            background-color: var(--plae_orange);
+        }
+    }
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color .3s;
+}
+
+.btn.maxW{
+    width: 100%;
+}
+
+.btn.noPad{
+    padding: 0px;
+}
+
+.btn.primary{
+    background-color: var(--plae_orange);
+}
+
+.btn.primary:hover{
+    background-color: var(--orange);
+}
+
+.btn.success{
+    background-color: var(--pale_green);
+}
+
+.btn.success:hover{
+    background-color: var(--green);
+}
+
+.btn.danger{
+    background-color: var(--pale_red);
+}
+
+.btn.danger:hover{
+    background-color: var(--red);
+}
+
+.btn.secondary{
+    background-color: var(--pale_gray);
+}
+
+.btn.secondary:hover{
+    background-color: var(--gray);
+}
+
+input[type='text'] {
+    background-color: var(--pale_gray);
+    border: none;
+    color: #0d0d0d;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+textarea
+{
+    background-color: var(--pale_gray);
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    resize: none;
+}

@@ -1,0 +1,307 @@
+:root{
+    --white: #FFFFFF;
+    --gray: #E6E6E6;
+    --orange: #FDA312;
+    --blue: #0081AF;
+    --black: #000000;
+    --green: #2AB73C;
+    --red: #EF3E36;
+
+    --pale_black: #4D4D4D;
+    --pale_blue: #33559F;
+    --plae_orange: #FDBE59;
+    --pale_gray: #EDEDED;
+    --pale_green: #7AE188;
+    --pale_red: #F36F68;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+textarea
+{
+    background-color: var(--pale_gray);
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    resize: none;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--pale_gray);
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    column-gap: 20px;
+    height: 100vh;
+    padding: 5px;
+}
+
+.menu
+{
+    background-color: var(--pale_blue);
+    border-radius: 10px;
+    box-shadow: rgba(37, 33, 33, 0.16) 0px 1px 4px;
+}
+
+.content
+{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.user_section{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    justify-content: center;
+    padding: 10px 5px;
+    position: relative;
+    background-color: rgba(49, 59, 78, 0.516);
+    border-radius: 13px;
+    
+    >.image_holder{
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: url('/assets/images/user\ \(4\).png');
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    >p{
+        font-weight: bold;
+        color: whitesmoke;
+    }
+}
+
+.links {
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Center the links vertically */
+    align-items: center; /* Center the links horizontally */
+}
+
+.links > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50%; /* Making the links round */
+    padding: 10px; /* Adjust padding as needed */
+    text-decoration: none;
+    color: var(--black);
+    transition: all 0.3s;
+    width: 75px; /* Set initial width */
+    height: 75px; /* Set initial height to make it more of a circle */
+    position: relative; /* Ensure position is relative for child elements */
+}
+
+
+.links > a:hover {
+    border-radius: 10px; /* Make the link rectangular when hovered */
+    width: 240px; /* Expand width to fit content */
+    height: 50px; /* Expand height to fit content */
+}
+
+.links > a.accessed{
+    margin: 30px auto 30px auto;
+    border-radius: 10px;
+    width: 240px; 
+    height: 50px; 
+    background-color: var(--blue);
+}
+
+.links > a.accessed > img{
+    left: 27px;
+}
+
+.links > a > img {
+    width: auto; /* Adjust image width */
+    height: auto; /* Adjust image height */
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    max-height: 100%; /* Ensure the image doesn't exceed the container height */
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Translate to center */
+    transition: all 0.45s;
+    z-index: 0; /* Ensure image is behind text by default */
+}
+
+.links > a:hover > span {
+    opacity: 1; /* Show text when hovered */
+}
+
+.links > a.accessed > span {
+    opacity: 1; /* Show text when hovered */
+    color: white;
+}
+
+
+.links > a > span {
+    margin-top: 10px; /* Add some space between the image and text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    opacity: 0; /* Initially hide the text */
+    transition: all 0.3s;
+    z-index: 1; /* Ensure text is above image by default */
+}
+
+.links > a:hover > img {
+    left: 27px; /* Move the image to the left when hovered */
+}
+
+.links > a.active {
+    margin: 30px auto 30px auto;
+    background-color: var(--blue);
+    color: white;
+}
+
+.links > a.inactive {
+    margin: 30px auto 30px auto;
+    background-color: var(--blue);
+    color: white;
+    opacity: 0.75;
+}
+
+.links > a.inactive:hover {
+    opacity: 1;
+}
+
+
+
+input[type='text'] {
+    background-color: var(--pale_gray);
+    border: none;
+    color: #0d0d0d;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border: none;
+    background: var(--pale_gray);
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color .3s;
+}
+
+.btn.maxW{
+    width: 100%;
+}
+
+.btn.noPad{
+    padding: 0px;
+}
+
+.btn.primary{
+    background-color: var(--plae_orange);
+}
+
+.btn.primary:hover{
+    background-color: var(--orange);
+}
+
+.btn.success{
+    background-color: var(--pale_green);
+}
+
+.btn.success:hover{
+    background-color: var(--green);
+}
+
+.btn.danger{
+    background-color: var(--pale_red);
+}
+
+.btn.danger:hover{
+    background-color: var(--red);
+}
+
+.btn.secondary{
+    background-color: var(--pale_gray);
+}
+
+.btn.secondary:hover{
+    background-color: var(--gray);
+}
+
+.box {
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box h2 {
+    margin-top: 0;
+    border-radius: 50px;
+    background-color: var(--plae_orange);
+    width: 350px;
+}
+
+.content_row {
+    margin-bottom: 15px;
+}
+
+.content_row.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+}

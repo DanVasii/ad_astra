@@ -1,0 +1,122 @@
+.group_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 20px;
+    /* border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+
+.colegue {
+    display: flex;
+    align-items: center;
+    width: 250px; /* Set initial width */
+    height: 70px; /* Set initial height */
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: width 0.3s, height 0.3s; /* Adjust transition properties */
+    overflow: hidden; 
+}
+
+.colegue:hover {
+    height: 150px; /* Expand height on hover */
+    cursor: pointer;
+}
+
+.colegue_in_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    /* width: 100%; */
+}
+
+.user-details {
+    /* display: none; */
+    flex-direction: column;
+}
+
+/* .colegue:hover .user-details {
+    display: flex;
+} */
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.university-details {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding: 0px;
+}
+
+.user-university {
+    display: none; /* Hide university details by default */
+    margin: 0;
+    padding-left: 10px;
+    color: #666;
+}
+
+.user-name {
+    font-weight: bold;
+    padding-left: 10px;
+    margin: 0;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for overflow text */
+}
+
+
+.user-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.colegues_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Set height to auto */
+    overflow: visible; /* Allow overflow to be visible */
+
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.button-profile {
+    display: none; /* Hide profile button by default */
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out; /* Add transition for smooth animation */
+    transform: translateX(100%); /* Initially position the button outside the box */
+}
+
+.button-profile:hover {
+    background-color: #0056b3;
+}
+
+
+.colegue:hover .button-profile {
+    display: block; /* Show profile button on hover */
+    transform: translateX(0); /* Move the button to its original position */
+}
+
+.colegue:hover .user-university {
+    display: flex; /* Show university details on hover */
+}
+

@@ -1,0 +1,257 @@
+body {
+    background-color: var(--pale_gray);
+}
+
+.container {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto 0px auto;
+    width: 1000px;
+    background-color: white;
+}
+
+.crumbs {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.crumb {
+    padding: 5px 10px;
+    background-color: var(--plae_orange);
+    border-radius: 5px;
+}
+
+.crumb.active {
+    background-color: var(--orange);
+    color: white;
+}
+
+.content_container {
+    overflow: hidden;
+}
+
+.content_container--tray {
+    display: flex;
+    transition: transform .4s;
+}
+
+.content_container--tray > * {
+    flex: 0 0 100%;
+    padding: 0px 30px
+}
+
+input[type='text'] {
+    background-color: var(--pale_gray);
+    border: none;
+    color: #0d0d0d;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.content_row.split {
+    display: flex;
+}
+
+.content_row.split input[type="text"] {
+    flex: 1;
+}
+
+.content_row.split input[type="text"]:first-child {
+    margin-right: 10px;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border: none;
+    background: var(--pale_gray);
+    padding: 5px;
+    display: inline-block !important;
+    visibility: visible !important;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type="date"],
+focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.content_row.button {
+    > button {
+        width: 250px;
+        margin-left: auto;
+    }
+}
+
+.content_row.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea {
+    background-color: var(--pale_gray);
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    resize: none;
+}
+
+.experience_container {
+    display: grid;
+    grid-template-columns: 60% auto auto;
+    column-gap: 15px;
+    padding: 5px;
+    position: relative;
+}
+
+.experience_container > button {
+    position: absolute;
+    right: calc(100% - 32px);
+    opacity: 0;
+    visibility: hidden;
+    top: calc((100% - 32px) / 2);
+    transition: opacity .3s, right .3s;
+}
+
+.experience_container:hover > button {
+    visibility: visible;
+    right: 100%;
+    opacity: 1;
+}
+
+#exps>span {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.univs {
+    background-color: var(--pale_gray);
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-height: 250px;
+}
+
+.univ {
+    background-color: white;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.univ.active {
+    background-color: var(--green);
+}
+
+.speciality{
+    position: relative;
+    padding: 0px 20px;
+    > button{
+        position: absolute;
+        right: calc(100% - 32px);
+        top: calc((100% - 32px) / 2);
+        opacity: 0;
+        visibility: hidden;
+
+
+        transition: opacity .3s, right .3s;
+    }
+}
+
+.speciality:hover > button{
+    visibility: visible;
+    right: calc(100% - 15px);
+    opacity: 1;
+}
+
+.resource{
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    column-gap: 20px;
+    padding: 0px 20px;
+    position: relative;
+    > button{
+        position: absolute;
+        right: calc(100% - 32px);
+        top: calc((100% - 32px) / 2);
+        opacity: 0;
+        visibility: hidden;
+
+
+        transition: opacity .3s, right .3s;
+    }
+}
+
+.resource:hover > button{
+    visibility: visible;
+    right: calc(100% - 15px);
+    opacity: 1;
+}
+
+#res{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}

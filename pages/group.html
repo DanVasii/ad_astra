@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupa mea</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/dashboard_main.css">
+    <link rel="stylesheet" href="/assets/css/group.css"> <!-- If you have additional styles -->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="menu">
+        <div class="user_section">
+          <div class="image_holder"></div>
+          <p>Vasii Dan Emanuel</p>
+        </div>
+        <div class="links">
+          <a href="/dashboard" class="active">
+            <img src="/assets/images/home (1).png">
+            <span>Acasa</span>
+
+          </a>
+          <a href="/postari" class="inactive">
+            <img src="/assets/images/post-view.png">
+            <span>Postari</span>
+          </a>
+          <a href="/upload_res" class="inactive">
+            <img src="/assets/images/globe.png">
+            <span>Resurse</span>
+          </a>
+
+          <a href="/grupa_mea" class="accessed">
+            <img src="/assets/images/group.png">
+            <span>Grupa mea</span>
+          </a>
+
+          <a href="/recomandari" class="inactive">
+            <img src="/assets/images/information.png">
+            <span>Recomandari</span>
+          </a>
+          <a href="/log_out" class="accessed">
+            <img src="/assets/images/log-out.png">
+            <span>Log Out</span>
+          </a>
+        </div>
+      </div>
+      <div class="content">
+        <!-- online-education.png -->
+
+        <div class="join_group_container">
+            <h2>Nu sunteti inscris in nicio grupa </h2>
+            <div class="join_group_container_header">
+                
+                <input type="text" placeholder="Id grupa" id = 'grupa'>
+                <button type="submit" class="btn success" onclick="join()">
+                    <img src="/assets/images/join (1).png" alt="join-icon">
+                    Inroleaza-te
+                </button>
+            </div>
+
+            <img src="/assets/images/online-education.png" alt="online education icon">
+        </div>
+       
+
+      </div>
+    </div>
+
+    <script>
+      function join(){
+        
+        axios.post("/join_grupa").then((response)=>{
+          //redirect 
+          window.location.reload();
+        }).catch((err)=>{
+          console.log(err);
+        })
+      }
+    </script>
+  </body>
+</html>

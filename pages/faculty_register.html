@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel='stylesheet' href='/assets/css/main.css'>
+    <link rel='stylesheet' href='/assets/css/faculty_register.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src = '/assets/js/faculty_register.js'></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Faculty Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="crumbs">
+            <div class="crumb active">Detalii facultate</div>
+            <div class="crumb">Specializari</div>
+            <div class="crumb">Resurse</div>
+        </div>
+
+        <div class="content_container">
+            <div class="content_container--tray">
+                <div class="content">
+                    <div class="content_row">
+                        <input type="text" placeholder="Universitate" id = 'univ_name'>
+                    </div>
+                    <div class="content_row split">
+                        <input type="text" placeholder="Oras" id = 'oras'>
+                        <input type="text" placeholder="Judet" id = 'judet'>
+                    </div>
+                    <div class="content_row button">
+                        <button class="btn primary" onclick="next(2)"><img src='/assets/images/home (1).png'> Urmatoarea</button>
+                    </div>
+                    
+                </div>
+                <div class="content">
+                    <div class="content_row">
+                        <button class="btn primary maxW" onclick="addSpecializareField()"><img src='/assets/images/plus (1).png'> Adauga Specializare</button>
+                    </div>
+                    <div id="specializariFields">
+
+                    </div>
+                    
+                    <div class="content_row buttons">
+                        <button class="btn secondary" onclick="next(1)"><img src='/assets/images/home (1).png'> Inapoi</button>
+                        <button class="btn primary" onclick="next(3)"><img src='/assets/images/home (1).png'> Urmatoarea</button>
+                    </div>
+                </div>
+                <div class="content">
+                  
+
+                    <div class="content_row">
+                        <button class="btn primary maxW" onclick="add_res()"> <img src = '/assets/images/plus (1).png'/> Adauga resursa</button>
+                    </div>
+                    
+                    <div class="content_row" id = 'res'>
+
+                    </div>
+
+                    <div class="content_row button">
+                        <button class="btn success" onclick="next(4)"><img src='/assets/images/home (1).png'> Finalizare</button>
+                    </div>
+                    
+                </div>
+                <div class="content">
+                    <div class="content_row" style="display: flex; flex-direction: column; row-gap: 20px; justify-content: center; align-items: center;">
+                        <img src = '/assets/images/check.png' style="width: 192px;"/>
+                        <h2>Succes!</h2>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="content_row" style="display: flex; flex-direction: column; row-gap: 20px; justify-content: center; align-items: center;">
+                        <img src = '/assets/images/error.png' style="width: 192px;"/>
+                        <h2>Eroare!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <template id = 'add_special'>
+        <div class = "speciality">
+            <input type="text" placeholder="Nume specializare">
+            <button class="btn danger noPad"><img src = '/assets/images/trash.png'></button>
+        </div>
+    </template>
+
+    <template id = 'res_node'>
+        <div class="resource">
+            <button class="btn danger noPad"><img src = '/assets/images/trash.png'/></button>
+
+            <input type="text" placeholder="Nume resursa">
+            <input type="text" placeholder="Pret resursa">
+
+        </div>
+    </template>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomandari</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/dashboard_main.css">
+    <link rel="stylesheet" href="/assets/css/recomandari.css"> <!-- If you have additional styles -->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="menu">
+        <div class="user_section">
+          <div class="image_holder"></div>
+          <p>Vasii Dan Emanuel</p>
+        </div>
+        <div class="links">
+          <a href="/dashboard" class="active">
+            <img src="/assets/images/home (1).png">
+            <span>Acasa</span>
+
+          </a>
+          <a href="/postari" class="inactive">
+            <img src="/assets/images/post-view.png">
+            <span>Postari</span>
+          </a>
+          <a href="/upload_res" class="inactive">
+            <img src="/assets/images/globe.png">
+            <span>Resurse</span>
+          </a>
+
+          <a href="/grupa_mea" class="inactive">
+            <img src="/assets/images/group.png">
+            <span>Grupa mea</span>
+          </a>
+
+          <a href="/recomandari" class="accessed">
+            <img src="/assets/images/information.png">
+            <span>Recomandari</span>
+          </a>
+
+          <a href="/log_out" class="accessed">
+            <img src="/assets/images/log-out.png">
+            <span>Log Out</span>
+          </a>
+        </div>
+      </div>
+      <div class="content">
+       <div class="rec_container">
+        
+      </div>
+    </div>
+    
+    <template id = 'rec'>
+      <div class="card-wrapper swiper-wrapper">
+        <div class="card swiper-slide">
+            <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                    <img src="/assets/images/user (3).png" alt="" class="card-img">
+                </div>
+            </div>
+            <div class="card-content">
+                <h2 class="name"></h2>
+                <span class="locatie"></span>
+                <p class="description"></p>
+                <button class="btn primary maxW">Vezi profil</button>
+            </div>
+        </div>
+     </div>
+    </template>
+    <script>
+      function truncateString(str, maxLength) {
+        if (str.length <= maxLength) {
+          return str;
+        } else {
+          return str.substring(0, maxLength) + "...";
+        }
+      }
+
+      window.addEventListener("load", function(){
+        axios.post("/get_recomandari").then((response)=>{
+          let data = response.data, frag = document.createDocumentFragment();
+
+          data.forEach((user)=>{
+            let node = document.querySelector("#rec").content.cloneNode(true);
+            node.querySelector(".name").textContent = user.name;
+            node.querySelector(".locatie").textContent = user.locatie;
+            node.querySelector(".description").textContent = truncateString(user.about, 220);
+
+            frag.appendChild(node);
+          })
+
+          document.querySelector(".rec_container").appendChild(frag);
+        }).catch((err)=>{
+          console.log(err);
+        })
+      })
+    </script>
+
+
+  </body>
+</html>

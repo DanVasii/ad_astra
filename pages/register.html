@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel = 'stylesheet' href = '/assets/css/main.css'>
+    <link rel = 'stylesheet' href = '/assets/css/register.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src = '/assets/js/register.js'></script>
+    <title>UniTe - inregistrare</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="crumbs">
+            <div class="crumb">
+                Detalii personale
+            </div>
+            <div class="crumb">
+                Despre tine
+            </div>
+            <div class="crumb">
+                Educatie
+            </div>
+        </div>
+        <div class="content_container">
+            <div class="content_container--tray">
+                <div class="content">
+                    <div class="content_row split">
+                        <input type="text" id="user_nume"  placeholder="Nume">
+                        <input type="text" id="user_prenume"  placeholder="Prenume  ">     
+                    </div>
+
+                    <div class="content_row">
+                        <input type="date" required="required" id = 'user_birth'>
+                    </div>
+
+                    <div class="content_row split">
+                        <input type="text" id="user_judet"  placeholder="Judet">
+                        <input type="text" id="user_oras"  placeholder="Oras">
+                    </div>
+
+                    <div class="content_row split">
+                        <input type="text" id="user_phone"  placeholder="Nr. telefon">
+                        <input type="text" id="user_email"  placeholder="Email">
+                    </div>
+
+                    <div class="content_row split">
+                        <input type="password" id="user_pass"  placeholder="Parola">
+                    </div>
+
+                    <div class="content_row button">
+                        <button class="btn primary" onclick="next(2)"><img src='/assets/images/home (1).png'> Urmatoarea</button>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content_row">
+                        <textarea placeholder="Despre mine" rows="10"  id = 'user_about'></textarea>
+                    </div>
+
+                    <h2>Experienta</h2>
+                    <div class="content_row" id = 'exps'>
+                        <span>Nu sunt experiente adaugate</span>
+                    </div>
+
+                    <div class="content_row">
+                        <button class="btn success maxW" onclick="add_exp()"><img src = '/assets/images/plus (1).png'> Adauga experienta</button>
+                    </div>
+                    
+                    <div class="content_row buttons">
+                        <button class="btn secondary" onclick="next(1)"><img src='/assets/images/home (1).png'> Inapoi</button>
+
+                        <button class="btn primary" onclick="next(3)"><img src='/assets/images/home (1).png'> Urmatoarea</button>
+                    </div>
+
+                </div>
+                <div class="content">
+                    <div class="content_row">
+                        <input type="text" id="user_highs"  placeholder="Liceu">
+                    </div>
+
+                    <h2>Facultate</h2>
+                    <div class="content_row">
+                        <div class="univ_container">
+                            <input type="text"   placeholder="Nume facultate" oninput="search_univ(this)">
+                            <div class="univs">
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content_row button">
+
+                        <button class="btn success" onclick="next(4)"><img src='/assets/images/home (1).png'> Finalizare</button>
+                    </div>
+
+                </div>
+                <div class="content">
+                    <div class="content_row" style="display: flex; flex-direction: column; row-gap: 20px; justify-content: center; align-items: center;">
+                        <img src = '/assets/images/check.png' style="width: 192px;"/>
+                        <h2>Succes!</h2>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="content_row" style="display: flex; flex-direction: column; row-gap: 20px; justify-content: center; align-items: center;">
+                        <img src = '/assets/images/error.png' style="width: 192px;"/>
+                        <h2>Eroare!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id = 'exp_new'>
+        <div class="experience_container">
+            <button class="btn danger noPad" onclick="remove_exp(this)"><img src = '/assets/images/trash.png'></button>
+            <input type="text" placeholder="Titlu"> <input type="text" placeholder="An inceput"> <input type="text" placeholder="An finalizare">
+        </div>
+    </template>
+</body>
+</html>

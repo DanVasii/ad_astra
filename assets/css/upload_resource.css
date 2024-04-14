@@ -1,0 +1,147 @@
+.add-resource-form{
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.add-resource-form.show{
+    opacity: 1;
+    display: block;
+    pointer-events: auto;
+}
+
+.add-resource-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.add-resource-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-resource-form .upload-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-resource-form  .upload-container .file-preview-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 150px;
+    margin: 10px;
+}
+
+.add-resource-form .upload-container .file-preview-container .preview-image{
+    max-width: 80%;
+    height: 60%;
+    margin: 10px;
+}
+
+.add-resource-form .upload-container .file-preview-container .preview-file-name {
+    font-size: 14px;
+}
+
+.resource-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.university-details {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.user-university {
+    margin: 0;
+    padding: 0; 
+}
+.user-name {
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.user-faculty{
+    padding: 0px;
+    margin: 5px;
+}
+
+
+.user-image {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    margin-right: 5px;
+}
+
+.resource-files{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.resource-file{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--plae_orange);
+    margin-right: 5px;
+    border-radius: 8px;
+    padding: 0px 15px;
+} 
+
+.file-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.download {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.download-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 5px;
+}

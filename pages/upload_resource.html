@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload resource</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src = '/assets/js/upload_resource.js'></script>
+
+    <link rel="stylesheet" href="/assets/css/dashboard_main.css">
+    <link rel="stylesheet" href="/assets/css/upload_resource.css"> <!-- If you have additional styles -->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="menu">
+        <div class="user_section">
+          <div class="image_holder"></div>
+          <p>Vasii Dan Emanuel</p>
+        </div>
+        <div class="links">
+          <a href="/dashboard" class="active">
+            <img src="/assets/images/home (1).png">
+            <span>Acasa</span>
+
+          </a>
+          <a href="/postari" class="inactive">
+            <img src="/assets/images/post-view.png">
+            <span>Postari</span>
+          </a>
+          <a href="/upload_res" class="accessed">
+            <img src="/assets/images/globe.png">
+            <span>Resurse</span>
+          </a>
+
+          <a href="/grupa_mea" class="inactive">
+            <img src="/assets/images/group.png">
+            <span>Grupa mea</span>
+          </a>
+
+          <a href="/recomandari" class="inactive">
+            <img src="/assets/images/information.png">
+            <span>Recomandari</span>
+          </a>
+
+          <a href="/log_out" class="accessed">
+            <img src="/assets/images/log-out.png">
+            <span>Log Out</span>
+          </a>
+        </div>
+      </div>
+      <div class="content">
+        <button class="btn maxW primary">
+          <img src="/assets/images/plus (1).png" alt="add icon">
+          Adaugă resursă
+        </button>
+        <form class="add-resource-form" enctype="multipart/form-data">
+            <textarea rows="4" name="content" placeholder="Conținut...."></textarea>
+            <input type="file" name="files" multiple>
+
+            <div class="upload-container">
+
+            </div>
+            
+            <button class="btn maxW success" type="submit" >
+              <img src="/assets/images/plus (1).png" alt="add icon">
+              Adaugă
+            </button>
+        </form>
+
+        <div class="resource-container">
+
+          <div class="user-info">
+            <img src="/assets/images/user (1).png" alt="User Image" class="user-image"/>
+    
+            <div class="user-details">
+                <p class="user-name">Andreea Marin</p>
+                <div class="university-details">
+                    <p class="user-university">UTCN.</p>
+                    <p class="user-faculty">Computer Science</p>
+                </div>
+    
+          </div>
+    
+        </div>
+
+          <div class="resource-content">
+            <p> Am încărcat notițele cursului 4 de Analiză matematică </p>
+          </div>
+
+          <div class="resource-files">
+            <div class="resource-file">
+              <img src="/assets/images/pdf-icon.png" alt="pdf icon" class="file-image">
+              <p>AM_Curs4.pdf</p>
+            </div>
+
+            <div class="resource-file">
+              <img src="/assets/images/pdf-icon.png" alt="pdf icon" class="file-image">
+              <p>AM_Curs4_probleme_rezolvate.pdf</p>
+            </div>
+        
+          </div>
+
+          <div class="download">
+            <button class="btn success maxW">
+              <img src="assets/images/download.png" alt="download icon" class="download-image">
+              Download
+            </button>
+          </div>
+
+        </div>
+
+        <!-- resursa 2 -->
+
+        <div class="resource-container">
+
+          <div class="user-info">
+            <img src="/assets/images/user (1).png" alt="User Image" class="user-image"/>
+    
+            <div class="user-details">
+                <p class="user-name">Raul Spatariu</p>
+                <div class="university-details">
+                    <p class="user-university">UTCN.</p>
+                    <p class="user-faculty">Computer Science</p>
+                </div>
+    
+          </div>
+    
+        </div>
+
+          <div class="resource-content">
+            <p> Assignment 1 Sisteme de operare </p>
+          </div>
+
+          <div class="resource-files">
+            <div class="resource-file">
+              <img src="/assets/images/zip-folder.png" alt="zip icon" class="file-image">
+              <p>Assignment1_Sisteme_Operare_2024.zip</p>
+            </div>
+        
+          </div>
+
+          <div class="download">
+            <button class="btn success maxW">
+              <img src="assets/images/download.png" alt="download icon" class="download-image">
+              Download
+            </button>
+          </div>
+
+        </div>
+        
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postari</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src = '/assets/js/postari.js'></script> 
+
+    <link rel="stylesheet" href="/assets/css/dashboard_main.css">
+    <link rel="stylesheet" href="/assets/css/form_types.css"> <!-- If you have additional styles -->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="menu">
+        <div class="user_section">
+          <div class="image_holder"></div>
+          <p>Vasii Dan Emanuel</p>
+        </div>
+        <div class="links">
+          <a href="/dashboard" class="active">
+            <img src="/assets/images/home (1).png">
+            <span>Acasa</span>
+          </a>
+          <a href="/postari" class="accessed">
+            <img src="/assets/images/post-view.png">
+            <span>Postari</span>
+          </a>
+          <a href="/upload_res" class="inactive">
+            <img src="/assets/images/globe.png">
+            <span>Resurse</span>
+          </a>
+
+          <a href="/grupa_mea" class="inactive">
+            <img src="/assets/images/group.png">
+            <span>Grupa mea</span>
+          </a>
+
+          <a href="/recomandari" class="inactive">
+            <img src="/assets/images/information.png">
+            <span>Recomandari</span>
+          </a>
+          <a href="/log_out" class="accessed">
+            <img src="/assets/images/log-out.png">
+            <span>Log Out</span>
+          </a>
+        </div>
+      </div>
+      <div class="content">
+        <button id="add_resource_button" class="btn maxW primary">
+            <img src="/assets/images/plus (1).png" alt="add icon">
+            Adaugă o postare nouă
+        </button>
+
+        <div id="main_add_container" class="main-add-container">
+            <!-- <p>Creeaza un anunt</p>
+            <p>Creeaza un thread</p>
+            <p>Creeaza un eveniment</p> -->
+            
+            <div id="announcementContainer"  class="add-container-post-row">
+                <img src="/assets/images/announcement.jpg" alt="anunt icon">
+                <p>Adaugă un anunț pentru comunitate.</p>
+            </div>
+            
+            <div id="postContainer" class="add-container-post-row">
+                <img src="/assets/images/post.png" alt="post icon">
+                <p>Spune comunității gândurile tale.</p>
+            </div>
+
+            <div id="eventContainer" class="add-container-post-row">
+                <img src="/assets/images/calendar_icon.png" alt="Calendar Image" >
+                <p>Adaugă un eveniment în calendarul comunității.</p>
+            </div>
+        </div>
+
+        <div id="anunt" class="add-form">
+            <!-- <p>this is just a test</p> -->
+            <h2>Postează un anunț</h2>
+
+            <div class="content_row">
+                <input type="text" placeholder="Titlu">
+            </div>
+            
+            <button class="btn maxW success">
+                <img src="/assets/images/plus (1).png" alt="add icon">
+                Adaugă
+            </button>
+
+        </div>
+
+        <div id="eveniment" class="add-form">
+            <h2>Postează un eveniment</h2>
+            <div class="content_row">
+                <input type="text" placeholder="Titlu">
+            </div>
+
+            <div class="content_row">
+                <input type="date" placeholder="Data">
+            </div>
+
+            <div class="content_row_split">
+                <input type="text" placeholder="Ora începerii">
+                <input type="text" placeholder="Durata evenimentului">
+            </div>
+
+            <div class="content_row">
+                <input type="text" placeholder="Scurtă descriere">
+            </div>
+
+            <button class="btn maxW success">
+                <img src="/assets/images/plus (1).png" alt="add icon">
+                Adaugă
+            </button>
+
+        </div>
+
+        <div id="post" class="add-form">
+            <h2>Adaugă o postare nouă</h2>
+            <div class="content_row">
+                <input type="text" placeholder="Titlu">
+            </div>
+            
+            <div class="content_row">
+                <input type="text" placeholder="Conținut">
+            </div>
+
+            <button class="btn maxW success">
+                <img src="/assets/images/plus (1).png" alt="add icon">
+                Adaugă
+            </button>
+        </div>
+
+        <div class="thread-post">
+
+            <div class="user-info">
+                <img src="/assets/images/user (1).png" alt="User Image" class="user-image"/>
+        
+                <div class="user-details">
+                    <p class="user-name">Sebastian Flavius</p>
+        
+                    <div class="university-details">
+                        <p class="user-university">UTCN.</p>
+                        <p class="user-faculty">Computer Science</p>
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+            <div class="thread-content">
+        
+                <div class="thread-header">
+                    <h2 class="thread-title">Noua versiune de java!</h2>
+                </div>
+        
+                <div class="thread-content">
+                    <p>O noua versiune de java s-a lansat!
+                        Check it out: https://www.oracle.com/java/technologies/javase/jdk21
+                    </p>
+                </div>  
+                
+                <div class="thread-title">
+                    <p class="thread-date">Posted on January 1, 2024</p>
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        <!-- Announcement -->
+        <div class="announcement-post">
+        
+            <div class="user-info">
+                <img src="/assets/images/user (1).png" alt="User Image" class="user-image">
+        
+                <div class="user-details">
+                    <p class="user-name">Cristian Florea</p>
+        
+                    <div class="university-details">
+                        <p class="user-university">UTCN.</p>
+                        <p class="user-faculty">Computer Science</p>
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+            <div class="announcement-content">
+                    
+                <div class="announcement-header">
+                    <img src="/assets/images/announcement.jpg" alt="Announcement Image" class="user-image">
+                    <h2 class="announcement-predefined">Anunț: </h2>
+                    <h2 class="announcement-title">Meditatii la Fundamental Algorithms</h2>
+                </div>
+                    
+                <div class="announcement-description">
+                    <p>
+                        Te invit să te alături meditațiilor despre Teoria Grafurilor din 'Fundamental Algorithms' la ora 4 PM, pe 15 aprilie 2024. Să descoperim împreună secretele acestui fascinant domeniu al algoritmilor!
+                    </p>
+                </div>
+
+                <div class="thread-title">
+                    <p class="thread-date">Posted on January 1, 2024</p>
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        <!-- Event -->
+        <div class="event-post">
+        
+            <div class="user-info">
+                <img src="/assets/images/user (1).png" alt="User Image" class="user-image">
+        
+                <div class="user-details">
+                    <p class="user-name">Ioana Maria</p>
+        
+                    <div class="university-details">
+                        <p class="user-university">UTCN.</p>
+                        <p class="user-faculty">Computer Science</p>
+                    </div>
+        
+                </div>
+        
+                <button class="btn primary size" >
+                    <p class="btn-attend-text"><strong>Participa</strong></img>
+                </button>
+        
+            </div>
+        
+            <div class="event-header" >
+                <img src="/assets/images/calendar_icon.png" alt="Calendar Image" >
+                <h2 class="event-predefined">Eveniment: </h2>
+                <h2 class="event-title">Competiție Bitdefender</h2>
+                
+            </div>
+        
+            <div class="event-details">
+                <p class="event-date">Când?: 1 Ianuarie, 2025</p>
+                <p class="event-time">Va începe la ora: 10:00 AM</p>
+                <p class="event-duration">Durație: 2 ore</p>
+                <p class="event-description">Descriere: O competitie de algoritmică pentru cei pasionați!</p>
+                <p class="event-audience">Categorie de participanți: studenți, elevi, oricine este pasionat</p>
+            </div>
+        
+        
+        </div>
+        
+
+      </div>
+    </div>
+  </body>
+</html>
